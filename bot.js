@@ -124,4 +124,3 @@ client.on('message', async message => {
 
 
 
-client.login('NzAyNjgwODE4MzQ2MjI5ODcx.XqFmmg.iH_BehB58zh_qeI7IPGKxvUGhZc');
