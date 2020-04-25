@@ -26,7 +26,7 @@ client.on('message', async message => {
   if (command === 'ödül') {
 
   	if (!args.length) {
-  		return message.channel.send(`Kullanım: !ödöl <Oyundaki Nick> <Oyundaki sunucu>  Örnek kullanım: /ödül Cleaner07 skyblock, ${message.author}!`);
+  		return message.channel.send(`Kullanım: !ödül <Oyundaki Nick> <Oyundaki sunucu>  Örnek kullanım: /ödül Cleaner07 skyblock, ${message.author}!`);
 	  }
 
 
