@@ -39,7 +39,7 @@ client.on('message', async message => {
         host: process.env.BOT_HOST,
         user: process.env.BOT_USERID,
         password: process.env.BOT_USERPASS,
-        database: "id13425323_mc_sv_online",
+        database: process.env.BOT_DATABASENAME,
         timestampStrings: true
       });
 
@@ -64,7 +64,7 @@ client.on('message', async message => {
         host: process.env.BOT_HOST,
         user: process.env.BOT_USERID,
         password: process.env.BOT_USERPASS,
-        database: "id13425323_mc_sv_online",
+        database: process.env.BOT_DATABASENAME,
         timestampStrings: true
       });
 
@@ -89,7 +89,7 @@ client.on('message', async message => {
         host: process.env.BOT_HOST,
         user: process.env.BOT_USERID,
         password: process.env.BOT_USERPASS,
-        database: "id13425323_mc_sv_online",
+        database: process.env.BOT_DATABASENAME,
         timestampStrings: true
       });
 
