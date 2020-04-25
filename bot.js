@@ -20,7 +20,7 @@ client.on('message', async message => {
     message.reply("Bir sonraki ödülü almak için 12 saat beklemelisiniz.");
     return;
   }
-  cooldown.add(message.author.id);
+  
   const args = message.content.slice(prefix.length).split(' ');
   const command = args.shift().toLowerCase();
   if (command === 'ödül') {
@@ -50,6 +50,7 @@ client.on('message', async message => {
         con.query(sql,data,function(err,results){
           if (err) throw err;
           console.log(results);
+	  cooldown.add(message.author.id);
           message.reply("Ödülünüz oyunda envanterinize eklendi..");
           return;
         });
@@ -74,6 +75,7 @@ client.on('message', async message => {
         con.query(sql,data,function(err,results){
           if (err) throw err;
           console.log(results);
+	  cooldown.add(message.author.id);
           message.reply("Ödülünüz oyunda envanterinize eklendi..");
           return;
         });
@@ -98,6 +100,7 @@ client.on('message', async message => {
         con.query(sql,data,function(err,results){
           if (err) throw err;
           console.log(results);
+  	  cooldown.add(message.author.id);
           message.reply("Ödülünüz oyunda envanterinize eklendi..");
           return;
         });
