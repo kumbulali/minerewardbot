@@ -17,9 +17,10 @@ client.on('message', async message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   if (cooldown.has(message.author.id)){
     message.delete();
-    var cooldown = new discord.RichEmbed()
-    	.addField("LignumCraft Ödül BOT","Bir sonraki ödülü almak için 12 saat beklemelisiniz.",true)
-    	.setColor(0xFF0000)
+    const cooldown = new Discord.MessageEmbed()
+    	.setTitle("LignumCraft Ödül BOT")
+    	.setDescription("Bir sonraki ödülü almak için 12 saat beklemelisiniz.")
+    	.setColor('#0099ff')
     message.channel.sendEmbed(cooldown);
     message.reply("Bir sonraki ödülü almak için 12 saat beklemelisiniz.");
     return;
