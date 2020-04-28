@@ -17,7 +17,11 @@ client.on('message', async message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   if (cooldown.has(message.author.id)){
     message.delete();
-    message.reply("Bir sonraki ödülü almak için 12 saat beklemelisiniz.");
+    const cooldown = new Discord.MessageEmbed()
+      .setTitle("LignumCraft Ödül BOT")
+      .setDescription(`Bir sonraki ödülü almak için 24 saat beklemelisiniz..`)
+      .setColor("#ff0c0c");
+    message.channel.send(cooldown);
     return;
   }
   
@@ -26,7 +30,12 @@ client.on('message', async message => {
   if (command === 'ödül') {
 
   	if (!args.length) {
-  		return message.channel.send(`Kullanım: !ödül <Oyundaki Nick> <Oyundaki sunucu>  Örnek kullanım: /ödül Cleaner07 skyblock, ${message.author}!`);
+  		const usage = new Discord.MessageEmbed()
+        		.setTitle("LignumCraft Ödül BOT")
+        		.setDescription(`Kullanım: !ödül <Oyundaki Nick> <Oyundaki sunucu>`)
+        		.setFooter("Örnek kullanım: /ödül Cleaner07 Skyblock")
+        		.setColor("#fff50c");
+      		return message.channel.send(usage);
 	  }
 
 
@@ -51,7 +60,13 @@ client.on('message', async message => {
           if (err) throw err;
           console.log(results);
 	  cooldown.add(message.author.id);
-          message.reply("Ödülünüz oyunda envanterinize eklendi..");
+          const skyblockmsg = new Discord.MessageEmbed()
+            .setTitle("LignumCraft Ödül BOT")
+            .setDescription(
+              `Ödülünüz, Skyblock sunucusu envanterinize eklendi..`
+            )
+            .setColor("#0ea500");
+          message.channel.send(skyblockmsg);
           return;
         });
       });
@@ -76,7 +91,11 @@ client.on('message', async message => {
           if (err) throw err;
           console.log(results);
 	  cooldown.add(message.author.id);
-          message.reply("Ödülünüz oyunda envanterinize eklendi..");
+          const factionmsg = new Discord.MessageEmbed()
+            .setTitle("LignumCraft Ödül BOT")
+            .setDescription(`Ödülünüz, Faction sunucusu envanterinize eklendi..`)
+            .setColor("#0ea500");
+          return message.channel.send(factionmsg);
           return;
         });
       });
@@ -101,7 +120,11 @@ client.on('message', async message => {
           if (err) throw err;
           console.log(results);
   	  cooldown.add(message.author.id);
-          message.reply("Ödülünüz oyunda envanterinize eklendi..");
+          const survivalmsg = new Discord.MessageEmbed()
+            .setTitle("LignumCraft Ödül BOT")
+            .setDescription(`Ödülünüz, Survival sunucusu envanterinize eklendi..`)
+            .setColor("#e1cc00");
+          message.channel.send(survivalmsg);
           return;
         });
       });
