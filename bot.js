@@ -59,6 +59,7 @@ client.on('message', async message => {
         con.query(sql,data,function(err,results){
           if (err) throw err;
           console.log(results);
+	  con.end();
 	  cooldown.add(message.author.id);
           const skyblockmsg = new Discord.MessageEmbed()
             .setTitle("LignumCraft Ödül BOT")
@@ -90,6 +91,7 @@ client.on('message', async message => {
         con.query(sql,data,function(err,results){
           if (err) throw err;
           console.log(results);
+	  con.end();
 	  cooldown.add(message.author.id);
           const factionmsg = new Discord.MessageEmbed()
             .setTitle("LignumCraft Ödül BOT")
@@ -119,6 +121,7 @@ client.on('message', async message => {
         con.query(sql,data,function(err,results){
           if (err) throw err;
           console.log(results);
+	  con.end();
   	  cooldown.add(message.author.id);
           const survivalmsg = new Discord.MessageEmbed()
             .setTitle("LignumCraft Ödül BOT")
