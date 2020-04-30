@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 let cooldown = new Set();
-let cdseconds = 10;
+let cdseconds = 86400;
 exports.run = (client, message, args) => {
   if (cooldown.has(message.author.id)) {
     message.delete();
