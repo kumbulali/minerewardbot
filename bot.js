@@ -64,7 +64,6 @@ client.on('message', async message => {
 	  setTimeout(() =>{
 	    cooldown.delete(message.author.id)
 	    }, cdseconds * 1000)
-	  });
           const skyblockmsg = new Discord.MessageEmbed()
             .setTitle("LignumCraft Ödül BOT")
             .setDescription(
