@@ -5,7 +5,7 @@ let cooldown = new Set();
 let cdseconds = 10;
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`${client.user.tag}, giriş yaptı!`);
   client.user.setActivity(`!ödül`);
 });
 
