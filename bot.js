@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = `!`;
 let cooldown = new Set();
-let cdseconds = 10;
+let cdseconds = 86400;
 
 client.on('ready', () => {
   console.log(`${client.user.tag}, giriş yaptı!`);
@@ -96,6 +96,9 @@ client.on('message', async message => {
           console.log(results);
 	  con.end();
 	  cooldown.add(message.author.id);
+	  setTimeout(() =>{
+	    cooldown.delete(message.author.id)
+	    }, cdseconds * 1000)
           const factionmsg = new Discord.MessageEmbed()
             .setTitle("LignumCraft Ödül BOT")
             .setDescription(`Ödülünüz, Faction sunucusu envanterinize eklendi..`)
@@ -126,6 +129,9 @@ client.on('message', async message => {
           console.log(results);
 	  con.end();
   	  cooldown.add(message.author.id);
+	  setTimeout(() =>{
+	    cooldown.delete(message.author.id)
+	    }, cdseconds * 1000)
           const survivalmsg = new Discord.MessageEmbed()
             .setTitle("LignumCraft Ödül BOT")
             .setDescription(`Ödülünüz, Survival sunucusu envanterinize eklendi..`)
