@@ -11,6 +11,10 @@ exports.run = (client, message, args) => {
     return message.channel.send(cooldown);
     return;
   }
+  if(!args[0].length){
+    message.delete();
+    return;
+  }
   if (!args.length) {
     const usage = new Discord.MessageEmbed()
       .setTitle("LignumCraft Ödül BOT")
