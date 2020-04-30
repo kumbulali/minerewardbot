@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 let prefix = `!`;
 let cooldown = new Set();
-let cdseconds = 43200;
+let cdseconds = 10;
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
