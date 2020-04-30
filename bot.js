@@ -17,11 +17,11 @@ client.on('message', async message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   if (cooldown.has(message.author.id)){
     message.delete();
-    const cooldown = new Discord.MessageEmbed()
+    const cooldownmsg = new Discord.MessageEmbed()
       .setTitle("LignumCraft Ödül BOT")
       .setDescription(`Bir sonraki ödülü almak için 24 saat beklemelisiniz..`)
       .setColor("#ff0c0c");
-    message.channel.send(cooldown);
+    message.channel.send(cooldownmsg);
     return;
   }
   
