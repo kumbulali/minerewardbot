@@ -49,6 +49,7 @@ exports.run = (client, message, args) => {
         const skyblockmsg = new Discord.MessageEmbed()
           .setTitle("LignumCraft Ödül BOT")
           .setDescription(`Ödülünüz, Skyblock sunucusu envanterinize eklendi..`)
+          .setFooter("Bu işlem 60 saniye kadar sürebilir...")
           .setColor("#0ea500");
         message.channel.send(skyblockmsg);
         return;
@@ -81,6 +82,7 @@ exports.run = (client, message, args) => {
         const factionmsg = new Discord.MessageEmbed()
           .setTitle("LignumCraft Ödül BOT")
           .setDescription(`Ödülünüz, Faction sunucusu envanterinize eklendi..`)
+          .setFooter("Bu işlem 60 saniye kadar sürebilir...")
           .setColor("#0ea500");
         message.channel.send(factionmsg);
         return;
@@ -113,6 +115,7 @@ exports.run = (client, message, args) => {
         const survivalmsg = new Discord.MessageEmbed()
           .setTitle("LignumCraft Ödül BOT")
           .setDescription(`Ödülünüz, Survival sunucusu envanterinize eklendi..`)
+          .setFooter("Bu işlem 60 saniye kadar sürebilir...")
           .setColor("#e1cc00");
         message.channel.send(survivalmsg);
         return;
